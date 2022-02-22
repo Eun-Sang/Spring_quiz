@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <insert id="insertReview" parameterType="com.example.lesson03.model.Review">
+ 	INSERT INTO `new_review`
+ 	(
+		`storeId`
+		,`menu`
+		,`userName`
+		,`createdAt`
+		,`updatedAt` 	
+ 	)
+ 	VALUES
+ 	(
+ 		#{storeId}
+ 		,#{menu}
+ 		,#{userName}
+ 		,#now{createdAt}
+ 		,#now{updatedAt}
+ 	)
+ 	
+ </insert>
+ 
+ <insert id="insertReviewAsfield" parameterType="map">
+ 	INSERT INTO `new_review`
+ 	(
+		`storeId`
+		,`menu`
+		,`userName`
+		,`createdAt`
+		,`updatedAt` 	
+ 	)
+ 	VALUES
+ 	(
+ 		#{storeId}
+ 		,#{menu}
+ 		,#{userName}
+ 		,now{createdAt}
+ 		,now{updatedAt}
+ 	)
+ 	
+ </insert>
