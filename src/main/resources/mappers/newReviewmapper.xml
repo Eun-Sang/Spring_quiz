@@ -41,3 +41,14 @@
  	)
  	
  </insert>
+ 
+ <update id="updateReviewById" parameterType="map">
+ 	UPDATE `new_review`
+ 	SET
+ 		`review` = #{}
+ 		,`updatedAt` = NOW{}
+ 		
+ 	WHERE
+ 		`id` = #{id}
+ 		
+ </update>
