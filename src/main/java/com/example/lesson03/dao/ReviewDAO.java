@@ -8,7 +8,7 @@ public class ReviewDAO {
 
 	public int insertReview(Review review);
 	
-	public int insertReviewAsfield(
+	public int insertReviewAsField(
 			@Param("storeId") int storeId, 
 			@Param("menu") String menu, 
 			@Param("userName") String userName, 

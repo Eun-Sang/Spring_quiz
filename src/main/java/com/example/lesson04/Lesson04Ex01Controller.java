@@ -1,6 +1,7 @@
 package com.example.lesson04;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -33,4 +34,15 @@ public class Lesson04Ex01Controller {
 		// 결과 jsp
 		return "/lesson04/after_add_user"; // 결과 jsp 경로
 	}
+	
+	// 가장 최근에 추가된 사람 한 명 가져오기
+	//	요청 : http://localhost:8080/lesson04/ex01/2
+	
+	@GetMapping("/lesson04/ex01/2")
+	public String ex01_2() {
+		// DB select - 가장 최근에 추가된 사람 한 명 가져오기
+		
+		return "/lesson04/get_last_user";
+	}
+	
 }
