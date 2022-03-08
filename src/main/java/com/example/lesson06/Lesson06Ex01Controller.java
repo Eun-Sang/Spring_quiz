@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @RequestMapping("/lesson06/ex01")
 @Controller
-public class Lesson06Controller {
+public class Lesson06Ex01Controller {
 
 	// 유저 추가 화면
 	// 요청 URL : http://localhost:8080/lesson06/ex01/add_user_view
